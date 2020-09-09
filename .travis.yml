@@ -2,11 +2,17 @@ language: go
 
 matrix:
   include:
-  -  os: linux
-     sudo: required
-     services:
-       - docker
-  -  os: osx
+  - os: linux
+    sudo: required
+    services:
+      - docker
+  - os: linux
+    arch: ppc64le
+    sudo: required
+    services:
+      - docker
+
+  - os: osx
 
 go:
   - 1.13.x
